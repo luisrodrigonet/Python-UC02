@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-primary">Título Principal do Site</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#section1" class="nav-link">Seção 1</a></li>
+                    <li class="nav-item"><a href="#section2" class="nav-link">Seção 2</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-link">Rodapé</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <section id="section1" class="mb-5">
+            <h2 class="text-success">Seção 1: Introdução</h2>
+            <p class="lead">Esta é a primeira seção da página. Aqui você pode adicionar informações introdutórias.</p>
+        </section>
+
+        <section id="section2" class="mb-5">
+            <h2 class="text-info">Seção 2: Conteúdo Detalhado</h2>
+
+            <article class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-warning">Artigo 1</h3>
+                    <p class="card-text">Este é um artigo dentro da Seção 2. Cada artigo deve ser independente e autoexplicativo.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-danger">Artigo 2</h3>
+                    <p class="card-text">Outro artigo dentro da mesma seção. Use tags de cabeçalho para organizar o conteúdo.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="container text-center">
+        <p class="text-muted">&copy; 2023 - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
