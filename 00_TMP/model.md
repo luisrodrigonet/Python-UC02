@@ -9,12 +9,22 @@
 
 ## Entidade: Ativo
 
-- tipo_ativo #
 - identificacao
+- nome
 - descricao
-- proprietario
+- tipo_ativo #
+- localizacao
+- uo_responsavel #
+- proprietario #
 - custodiantes
+- classificacao_disponibilidade
+- classificacao_integridade
+- classificacao_confidencilidade
+- classificacao_autenticidade
+- classificacao_lgpd
 - valor_ativo
+- status_ativo
+- data_revisao
 - criado_em
 - atualizado_em
 
