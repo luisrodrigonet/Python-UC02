@@ -40,8 +40,9 @@
 
     <!-- Estilos personalizados (opcional) -->
     <style>
+        
         body {
-            padding: 20px;
+            /* padding: 20px; */
         }
         header {
             margin-bottom: 20px;
@@ -114,123 +115,93 @@
 
                 <div class="col-md-10">
 
-                    <h4>Formulário de Cadastro</h4>
-                    
-                    <!-- 
-                    <form action="/cadastro" method="POST" target="_blank"
-                            id="form-cadastro" class="needs-validation">
-                    -->
-                    <form method="post" id="form-cadastro" 
-                        class="needs-validation">
+                    <!-- Título -->
+                    <h1 class="mb-4 text-center">Catálogo de Tênis Esportivos</h1>
 
-                        <div class="row g-3 mb-4">
-                            <!-- Nome Completo -->
-                            <div class="col-md-6">
-                                <label for="nome" class="form-label">Nome Completo*</label>
+                    <!-- Container da Tabela -->
+                    <div class="table-responsive-lg">
 
-                                <input type="text" class="form-control" id="nome" 
-                                    name="nome" placeholder="Seu nome completo" required>                                
-                            </div>
+                        <!-- Tabela -->
+                        <table class="table">
 
-                            <!-- E-mail -->
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">E-mail*</label>
-
-                                <input type="email" class="form-control" id="email" 
-                                    name="email" placeholder="exemplo@email.com" required>                      
-                            </div>
+                            <!-- Cabeçalho -->   
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col" style="width: 15%">Foto</th>
+                                    <th scope="col" style="width: 55%">Descrição</th>
+                                    <th scope="col" style="width: 30%">Valor</th>
+                                </tr>
+                            </thead>
                             
-                            <!-- Senha -->
-                            <div class="col-md-6">
-                                <label for="senha" class="form-label">Senha*</label>
+                            <!-- Corpo -->
+                            <tbody>
                                 
-                                <input type="password" class="form-control" id="senha" 
-                                    name="senha" minlength="6" required>
+                                <!-- Item 1 -->
+                                <tr>
+                                    <td>
+                                        <img src="img/shoes1.jpg" 
+                                            class="img-thumbnail" 
+                                            alt="Nike Air Force">
+                                    </td>
+                                    <td>
+                                        <h5 class="mb-1">Nike Air Force 1 '07</h5>
+                                        <ul class="list-unstyled">
+                                            <li><small>Cor: Branco</small></li>
+                                            <li><small>Material: Couro premium</small></li>
+                                            <li><span class="badge bg-success">Disponível</span></li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <span class="text-success fw-bold">R$ 899,90</span>
+                                        <del class="text-muted d-block">R$ 1.099,90</del>
+                                    </td>
+                                </tr>
+
+                                <!-- Item 2 -->
+                                <tr>
+                                    <td>
+                                        <img src="img/shoes2.jpg" 
+                                            class="img-thumbnail" 
+                                            alt="Adidas Superstar">
+                                    </td>
+                                    <td>
+                                        <h5 class="mb-1">Adidas Superstar Foundation</h5>
+                                        <ul class="list-unstyled">
+                                            <li><small>Cor: Preto/Branco</small></li>
+                                            <li><small>Característica: Shell toe</small></li>
+                                            <li><span class="badge bg-warning text-dark">Últimas unidades</span></li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <span class="text-success fw-bold">R$ 499,90</span>
+                                        <div class="mt-1">
+                                            <small class="text-muted">ou 10x R$ 49,99</small>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
                                 
-                            </div>
-                        
-                            <!-- Confirmação de Senha -->
-                            <div class="col-md-6">
-                                <label for="confirmar-senha" class="form-label">Confirmar Senha*</label>
+                            </tbody>
+                            
+                            <!-- Roda-pé -->
+                            <tfoot class="table-secondary">
+                                <tr>
+                                    <td colspan="3" class="text-center small">
+                                        * Preços válidos até 30/09/2025 |
+                                         Frete grátis para compras acima de R$ 300,00
+                                    </td>
+                                </tr>
+                            </tfoot>
 
-                                <input type="password" class="form-control" id="confirmar-senha" 
-                                    name="confirmar-senha" minlength="6" required>                                
-                            </div>
+                        </table>
+                        <!-- Tabela -->
 
-                            <!-- Telefone -->
-                            <div class="col-md-6">
-                                <label for="telefone" class="form-label">Telefone*</label>
+                    </div>
+                    <!-- Container da Tabela -->
 
-                                <input type="tel" class="form-control" id="telefone" 
-                                    name="telefone" pattern="[0-9]{11}" required>
-                                
-                            </div>
-                        
-                            <!-- Data de Nascimento -->
-                            <div class="col-md-6">
-                                <label for="nascimento" class="form-label">Data de Nascimento</label>
-
-                                <input type="date" class="form-control" id="nascimento" 
-                                    name="nascimento">
-                            </div>
-
-
-                            <!-- Gênero (Radio Buttons) -->
-                            <div class="col-12">
-                                <h3>Selecione seu gênero:</h3>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" 
-                                        id="generoMasculino" value="masculino" checked>
-                                    <label class="form-check-label" for="generoMasculino">
-                                    Masculino
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" 
-                                        id="generoFeminino" value="feminino">
-                                    <label class="form-check-label" for="generoFeminino">
-                                    Feminino
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" 
-                                        id="generoOutro" value="outro">
-                                    <label class="form-check-label" for="generoOutro">
-                                    Outro
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" 
-                                        id="generoPrefiroNaoResponder" value="prefiro_nao_responder">
-                                    <label class="form-check-label" for="generoPrefiroNaoResponder">
-                                    Prefiro não responder
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Termos de Aceite -->
-                            <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="termos" required>
-                                <label class="form-check-label" for="termos">Aceito os termos de uso*</label>                                
-                            </div>
-                            </div>
-                        
-                            <!-- Botão de Envio -->
-                            <div class="col-6">
-                                <button class="btn btn-primary w-100 py-2" type="submit"> Cadastrar </button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-danger w-100 py-2" type="reset"> Cancelar </button>
-                            </div>
-                        </div>          
-
-                    </form>
                 </div>
+
             </div>
         </div>
     </main>
@@ -260,12 +231,14 @@
                     <p>Contatos</p>
                     <p><i class="fa-solid fa-headset"></i> +55 (24) 2233-4455</p>
                     <p><i class="fa-solid fa-envelope"></i> 
-                        <a href="mailto:contato@tenis.github.io" class="text-white">
+                        <a href="mailto:contato@tenis.github.io" 
+                            class="nav-link text-white">
                             contato@tenis.github.io
                         </a>
                     </p>
                     <p>
-                        <a href="suporte.html" class="text-white">
+                        <a href="suporte.html" 
+                            class="nav-link text-white">
                             Acesse o suporte
                         </a> 
                     </p>
